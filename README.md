@@ -2,6 +2,9 @@
 Logs your connection speed to a Google sheet. 
 Tested and works with Raspberry Pi 3B, given relevant modules are installed (see below).
 
+Uses the `gspread` module.
+
+
 ### Preparing Your Google Account
 The following is based on [this video](https://www.youtube.com/watch?v=7I2s81TsCnc):
 
@@ -25,3 +28,10 @@ Mind you, you'll need the json file, sheet name and worksheet name for later.
 + ouath2client
 + requests
 + BeautifulSoup
+
+
+### Further Useful Resources
+
++ Gspread: [github](https://github.com/burnash/gspread), [documentation](http://gspread.readthedocs.io/en/latest/index.html)
++ [Pretty Printed - How to Use Google Sheets in Python (YouTube)](https://www.youtube.com/watch?v=7I2s81TsCnc)
++ Twilio - Google Spreadsheets and Python. [Post](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html) and [video](https://www.youtube.com/watch?v=vISRn5qFrkM).
