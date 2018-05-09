@@ -38,7 +38,7 @@ Notes:
 
 All the things.
 
-Exception and error handling. Break script to different modules. Stop using hard coded inputs. Better documentation. Some to-dos in the code itself.
+Exception and error handling. Break script to different modules. Stop using hard coded inputs. Better documentation. Some to-dos in the code itself. Package it all for practice?
 
 
 ### Further Useful Resources
