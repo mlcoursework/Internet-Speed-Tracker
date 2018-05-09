@@ -17,9 +17,11 @@ The following is based on [this video](https://www.youtube.com/watch?v=7I2s81TsC
 4. Open the json and copy the _client_email_.
 5. Create a Google Sheet (or go to an existing one) and share that sheet with the _client_email_.
 
-Mind you, you'll need the json file, sheet name and worksheet name for later.
+Notes:
 
-Note that the code does not currently create a header row in the Google sheet, so you'll have to do it yourself (copy & paste should work): <br>timestamp	ping	dl	ul	server_id	test_status .
++ Mind you, you'll need the json file, sheet name and worksheet name for later.
++ The code does not currently create a header row in the Google sheet, so you'll have to do it yourself (copy & paste should work): <br>timestamp	ping	dl	ul	server_id	test_status .
++ You can pre-define a chart area in Google Sheets, so you can create a chart that populates as the data is registered.
 
 
 ### Requirements
