@@ -19,7 +19,7 @@ The following is based on [this video](https://www.youtube.com/watch?v=7I2s81TsC
 
 Mind you, you'll need the json file, sheet name and worksheet name for later.
 
-Note that the code does not currently create a header row in the Google sheet, so you'll have to do it yourself: <br>timestamp	ping	dl	ul	server_id	test_status .
+Note that the code does not currently create a header row in the Google sheet, so you'll have to do it yourself (copy & paste should work): <br>timestamp	ping	dl	ul	server_id	test_status .
 
 
 ### Requirements
@@ -33,7 +33,11 @@ Note that the code does not currently create a header row in the Google sheet, s
 
 
 ### To Do
-All the t
+
+All the things.
+
+Exception and error handling. Break script to different modules. Stop using hard coded inputs. Better documentation. Some to-dos in the code itself.
+
 
 ### Further Useful Resources
 
