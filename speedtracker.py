@@ -12,7 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 def get_servers():
     """
-    Finds all relevant servers (in this case, from Tel Aviv)
+    Finds all relevant servers (in this case, from London)
     Requires requests and BeautifulSoup.
     Future: move cc/name as args and other criteria as optional args
     
