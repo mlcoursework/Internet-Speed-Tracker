@@ -9,7 +9,8 @@ The following is based on [this video](https://www.youtube.com/watch?v=7I2s81TsC
 2. Go to **APIs & Services** > **Dashboard** (left sidebar). Click 'Enable APIs and Services' and enable the Google Sheets and Google Drive APIs.
 3. Go to **Credentials** (left sidebar):
    + Create credentials > Service account key
-   + Select _New service account_ (or select the service account if it already exists)
+   + Select _New service account_, give a service account name, and set the Role to Owner (steps will vary a little if the service account already exists and you're just adding a user)
+   + Click `Create` (_Key type_ should be set to JSON by default)
 
 
 
