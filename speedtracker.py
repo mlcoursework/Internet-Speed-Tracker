@@ -10,23 +10,22 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # --------------------- Getting Speed Data ---------------------
 
-def get_servers():
+def get_servers(attrs_dict):
     """
-    Finds all relevant servers (in this case, from London)
+    Finds server ids for all relevant servers.
     Requires requests and BeautifulSoup.
-    Future: move cc/name as args and other criteria as optional args
     
+    attrs_dict: dictionary with attributes (keys) and their values to 
+    filter the list of servers by. Available attributes include: 
+    name - city name, country - country name, cc - two letter country code, sponsor, id et al.
     """
     
     r = requests.get('http://c.speedtest.net/speedtest-servers-static.php')
     soup = BeautifulSoup(r.text, "lxml")
     
-    # Some raspberry pi units might have issues installing lxml, this should work instead:
-    # soup = BeautifulSoup(r.text, "html.parser")
-    
     servers = []
     
-    for i in soup.find_all(attrs={'cc':'GB', 'name':"London"}):
+    for i in soup.find_all(attrs=attrs_dict):
         servers.append(int(i.get('id')))
         
     return servers
@@ -34,9 +33,16 @@ def get_servers():
 
 def run_test(servers):
     """
+    Runs the speed test and returns a dictionary of results.
+    test_status (key): indicates whether speed test was run successfully (value = 1) or not (value = 0).
     Based on docs: https://github.com/sivel/speedtest-cli/wiki
+
+    servers: list of server ids, the output of get_servers().
     """
     
+    # TO DO: check that servers is a list, check all values are ints
+
+
     try:
         s = speedtest.Speedtest()
         s.get_servers(servers)
@@ -95,7 +101,7 @@ def gsheet_connect(credentials):
 
     
     
-def gsheet_open(sprdname='gsheet_test', shtname='SpeedLog'):
+def gsheet_open(sprdname, shtname):
     """
     'Opens' a specific sheet in a workbook for editing.
     
@@ -103,6 +109,8 @@ def gsheet_open(sprdname='gsheet_test', shtname='SpeedLog'):
     shtname: sheet name in that spreadsheet, str
     """
     
+    # TO DO: handle non existing spreadsheets / sheetnames
+
     global wks
     
     sht = gc.open(sprdname)
@@ -129,7 +137,7 @@ def main(json_loc, n_samples, sleeptime):
     sleeptime: number of seconds to wait between speed tests, int
     """
     
-    servers = get_servers()    
+    servers = get_servers({'cc':'GB', 'name':"London"})    
     
     
     credentials = get_creds(json_loc)
@@ -148,6 +156,6 @@ def main(json_loc, n_samples, sleeptime):
         
 
 
-json_loc = 'assets/speedtracker.json'
-main(json_loc, 20, 120)
+json_loc = 'your_json_file.json'
+main(json_loc, 2, 120)
 
