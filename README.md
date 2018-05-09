@@ -22,7 +22,7 @@ Mind you, you'll need the json file, sheet name and worksheet name for later.
 
 ### Requirements
 
-+ speedtest
++ speedtest<br>
 (pip install speedtest-cli)
 + gspread
 + ouath2client
