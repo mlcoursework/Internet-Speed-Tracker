@@ -21,6 +21,9 @@ def get_servers():
     r = requests.get('http://c.speedtest.net/speedtest-servers-static.php')
     soup = BeautifulSoup(r.text, "lxml")
     
+    # Some raspberry pi units might have issues installing lxml, this should work instead:
+    # soup = BeautifulSoup(r.text, "html.parser")
+    
     servers = []
     
     for i in soup.find_all(attrs={'cc':'GB', 'name':"London"}):
