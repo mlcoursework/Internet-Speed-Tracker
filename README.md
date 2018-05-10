@@ -38,7 +38,7 @@ Notes:
 
 All the things.
 
-Exception and error handling. Break script to different modules. Stop using hard coded inputs. Better documentation. Some to-dos in the code itself. Package it all for practice? Learn how to check all dependencies are installed for practice?
+Exception and error handling. Break script to different modules. Stop using hard coded inputs. Better documentation. Some to-dos in the code itself. Package it all for practice? Learn how to check all dependencies are installed for practice (see requirements.txt)?
 
 
 ### Further Useful Resources
