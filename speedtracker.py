@@ -10,7 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # --------------------- Getting Speed Data ---------------------
 
-def get_servers(attrs_dict):
+def find_servers(attrs_dict):
     """
     Finds server ids for all relevant servers.
     Requires requests and BeautifulSoup.
@@ -137,7 +137,7 @@ def main(json_loc, n_samples, sleeptime):
     sleeptime: number of seconds to wait between speed tests, int
     """
     
-    servers = get_servers({'cc':'GB', 'name':"London"})    
+    servers = find_servers({'cc':'GB', 'name':"London"})    
     
     
     credentials = get_creds(json_loc)
