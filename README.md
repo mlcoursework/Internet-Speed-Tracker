@@ -46,3 +46,6 @@ Exception and error handling. Break script to different modules. Stop using hard
 + Gspread: [github](https://github.com/burnash/gspread), [documentation](http://gspread.readthedocs.io/en/latest/index.html)
 + [Pretty Printed - How to Use Google Sheets in Python](https://www.youtube.com/watch?v=7I2s81TsCnc)  (YouTube)
 + Twilio: Google Spreadsheets and Python: [post](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html), [video](https://www.youtube.com/watch?v=vISRn5qFrkM).
++ Check out:
+ + [gspread-pandas](https://github.com/aiguofer/gspread-pandas)
+ + [df2gspread](https://github.com/maybelinot/df2gspread)
